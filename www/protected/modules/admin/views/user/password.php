@@ -16,6 +16,6 @@ $this->menu=array(
 <?php
     echo CHtml::form();
     echo CHtml::textField('password');
-    echo CHtml::endForm();
     echo CHtml::submitButton('Изменить пароль');
+    echo CHtml::endForm();
 ?>

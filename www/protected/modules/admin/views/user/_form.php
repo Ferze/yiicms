@@ -24,12 +24,6 @@
 		<?php echo $form->error($model,'username'); ?>
 	</div>
 
-    <div class="row">
-		<?php echo $form->labelEx($model,'password'); ?>
-		<?php echo $form->textField($model,'password',array('size'=>15,'maxlength'=>15)); ?>
-		<?php echo $form->error($model,'password'); ?>
-	</div>
-
 	<div class="row">
 		<?php echo $form->labelEx($model,'ban'); ?>
 		<?php echo $form->textField($model,'ban'); ?>

@@ -30,7 +30,7 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('username, password, ban, role, email', 'required'),
+			array('username,ban, role, email', 'required'),
 			array('created, ban, role', 'numerical', 'integerOnly'=>true),
 			array('username, password', 'length', 'max'=>15),
 			array('email', 'length', 'max'=>255),
@@ -108,4 +108,11 @@ class User extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+    public function beforeSave(){
+        if ($this->isNewRecord){
+            $this->created = time();
+        }
+        $this->password = md5($this->password);
+        return parent::beforeSave();
+    }
 }

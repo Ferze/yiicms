@@ -56,12 +56,15 @@ class UserController extends Controller
     {
         $model=$this->loadModel($id);
 
-        $model->password = $_POST['password'];
-
-        if($model->save())
-            $this->redirect(array('view','id'=>$model->id));
-
-        $this->render('password');
+        if(isset($_POST['password']))
+        {
+            $model->password=$_POST['password'];
+            if($model->save())
+                $this->redirect(array('view','id'=>$model->id));
+        }
+        $this->render('password', array(
+            'model' => $model,
+        ));
     }
 
 
