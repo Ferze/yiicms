@@ -23,12 +23,12 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'ban'); ?>
-		<?php echo $form->textField($model,'ban'); ?>
+		<?php echo $form->dropDownList($model,'ban', array(''=>'', 0 => 'Нет', 1 => 'Да')); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->label($model,'role'); ?>
-		<?php echo $form->textField($model,'role'); ?>
+		<?php echo $form->dropDownList($model,'role', array(''=>'', 1 => 'User', 2 => 'Admin')); ?>
 	</div>
 
 	<div class="row">

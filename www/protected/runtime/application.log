@@ -2602,3 +2602,41 @@ REQUEST_URI=/admin/user/password/id/2
 in C:\Program Files (x86)\EasyPHP-DevServer-13.1VC9\data\localweb\projects\yiicms\www\protected\modules\admin\views\user\password.php (8)
 in C:\Program Files (x86)\EasyPHP-DevServer-13.1VC9\data\localweb\projects\yiicms\www\protected\modules\admin\controllers\UserController.php (65)
 in C:\Program Files (x86)\EasyPHP-DevServer-13.1VC9\data\localweb\projects\yiicms\www\index.php (13)
+2014/02/09 19:10:00 [error] [php] Undefined variable: data (C:\Program Files (x86)\EasyPHP-DevServer-13.1VC9\data\localweb\projects\yiicms\www\protected\modules\admin\views\user\index.php:53)
+Stack trace:
+#0 C:\Program Files (x86)\EasyPHP-DevServer-13.1VC9\data\localweb\projects\yiicms\www\framework\web\CController.php(869): UserController->renderFile()
+#1 C:\Program Files (x86)\EasyPHP-DevServer-13.1VC9\data\localweb\projects\yiicms\www\framework\web\CController.php(782): UserController->renderPartial()
+#2 C:\Program Files (x86)\EasyPHP-DevServer-13.1VC9\data\localweb\projects\yiicms\www\protected\modules\admin\controllers\UserController.php(122): UserController->render()
+#3 C:\Program Files (x86)\EasyPHP-DevServer-13.1VC9\data\localweb\projects\yiicms\www\framework\web\actions\CInlineAction.php(49): UserController->actionIndex()
+#4 C:\Program Files (x86)\EasyPHP-DevServer-13.1VC9\data\localweb\projects\yiicms\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\Program Files (x86)\EasyPHP-DevServer-13.1VC9\data\localweb\projects\yiicms\www\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#6 C:\Program Files (x86)\EasyPHP-DevServer-13.1VC9\data\localweb\projects\yiicms\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Program Files (x86)\EasyPHP-DevServer-13.1VC9\data\localweb\projects\yiicms\www\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\Program Files (x86)\EasyPHP-DevServer-13.1VC9\data\localweb\projects\yiicms\www\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#9 C:\Program Files (x86)\EasyPHP-DevServer-13.1VC9\data\localweb\projects\yiicms\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\Program Files (x86)\EasyPHP-DevServer-13.1VC9\data\localweb\projects\yiicms\www\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Program Files (x86)\EasyPHP-DevServer-13.1VC9\data\localweb\projects\yiicms\www\framework\web\CController.php(265): UserController->runActionWithFilters()
+#12 C:\Program Files (x86)\EasyPHP-DevServer-13.1VC9\data\localweb\projects\yiicms\www\framework\web\CWebApplication.php(282): UserController->run()
+#13 C:\Program Files (x86)\EasyPHP-DevServer-13.1VC9\data\localweb\projects\yiicms\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\Program Files (x86)\EasyPHP-DevServer-13.1VC9\data\localweb\projects\yiicms\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\Program Files (x86)\EasyPHP-DevServer-13.1VC9\data\localweb\projects\yiicms\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/user/index
+in C:\Program Files (x86)\EasyPHP-DevServer-13.1VC9\data\localweb\projects\yiicms\www\protected\modules\admin\views\user\index.php (53)
+in C:\Program Files (x86)\EasyPHP-DevServer-13.1VC9\data\localweb\projects\yiicms\www\protected\modules\admin\controllers\UserController.php (122)
+in C:\Program Files (x86)\EasyPHP-DevServer-13.1VC9\data\localweb\projects\yiicms\www\index.php (13)
+2014/02/09 22:28:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in C:\Program Files (x86)\EasyPHP-DevServer-13.1VC9\data\localweb\projects\yiicms\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\Program Files (x86)\EasyPHP-DevServer-13.1VC9\data\localweb\projects\yiicms\www\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\Program Files (x86)\EasyPHP-DevServer-13.1VC9\data\localweb\projects\yiicms\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\Program Files (x86)\EasyPHP-DevServer-13.1VC9\data\localweb\projects\yiicms\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/02/10 18:15:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in C:\Program Files (x86)\EasyPHP-DevServer-13.1VC9\data\localweb\projects\yiicms\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\Program Files (x86)\EasyPHP-DevServer-13.1VC9\data\localweb\projects\yiicms\www\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\Program Files (x86)\EasyPHP-DevServer-13.1VC9\data\localweb\projects\yiicms\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\Program Files (x86)\EasyPHP-DevServer-13.1VC9\data\localweb\projects\yiicms\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---

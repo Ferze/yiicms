@@ -39,15 +39,27 @@ $this->menu=array(
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'id',
+        'id' => array(
+            'name' => 'id',
+            'headerHtmlOptions' => array('width' => '30')
+        ),
 		'username',
 		'password',
-		'created',
-		'ban',
-		'role',
-		/*
+        'created' => array(
+            'name' => 'created',
+            'value' => 'date("j.m.Y, H:i", $data->created)',
+            'filter' => false,
+        ),
+		'ban' => array(
+            'name' => 'ban',
+            'value' => '($data->ban==1)?"Бан":" "',
+            'filter' => array(0=>"Нет",1=>"Да"),
+        ),
+		'role' => array(
+            'name' => 'role',
+            'value'=>'($data->role==1)?"User":"Admin"',
+),
 		'email',
-		*/
 		array(
 			'class'=>'CButtonColumn',
 		),
